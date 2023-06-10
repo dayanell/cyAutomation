@@ -1,7 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
-  projectId: "1t7est",
+  projectId: "zpp7sm",
   env: {
     url: "https://vue-vuex-realworld.netlify.app/#/"
   },
