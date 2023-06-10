@@ -1,19 +1,18 @@
-import { defineConfig } from "cypress";
+const { defineConfig } = require("cypress");
 
-export default defineConfig({
-  defaultCommandTimeout: 60000,
+module.exports = defineConfig({
   projectId: "1t7est",
-
   env: {
-    url: "https://vue-vuex-realworld.netlify.app"
+    url: "https://vue-vuex-realworld.netlify.app/#/"
   },
+  
+  projectId: "zpp7sm",
+
   e2e: {
     setupNodeEvents(on, config) {
-      // Add the pageLoadTimeout configuration
-      //config.pageLoadTimeout = 30000; // Replace 10000 with your desired timeout in milliseconds
-
-      // Return the modified config object
-      return config;
+      // implement node event listeners here
     },
-  },
+    specPattern: 'cypress/e2e/*.js'
+  }
+  
 });
