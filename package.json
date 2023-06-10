@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "allscripts": "npx cypress run --spec 'cypress/e2e/*.cy.js' --record --key 70a2fc40-ab12-49c5-8ab1-772288e4b5b6",
+      "editArticle": "npx cypress run --spec 'cypress/e2e/edit-article.cy.js' --record --key 70a2fc40-ab12-49c5-8ab1-772288e4b5b6",
+      "createArticle": "npx cypress run --spec 'cypress/e2e/create-article.cy.js' --record --key 70a2fc40-ab12-49c5-8ab1-772288e4b5b6",
+      "signIn": "npx cypress run --spec 'cypress/e2e/signin.cy.js' --record --key 70a2fc40-ab12-49c5-8ab1-772288e4b5b6",
+      "signUp": "npx cypress run --spec 'cypress/e2e/signup.cy.js' --record --key 70a2fc40-ab12-49c5-8ab1-772288e4b5b6",
+      "deleteArticle": "npx cypress run --spec 'cypress/e2e/delete-article.cy.js' --record --key 70a2fc40-ab12-49c5-8ab1-772288e4b5b6"
+  
   },
   "author": "",
   "license": "ISC",
