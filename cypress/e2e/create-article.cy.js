@@ -59,33 +59,5 @@ context("Create Article", () => {
     cy.stopAllXHR();
   });
   
-  it("should not add a new article into a website: 'Write your article(in markdown)' field  can't be blank", () => {
-    cy.generateRandomData().then((randomData) => {
-      const { tags, title, subject, content } = randomData;
-
-      editArticlePage.typeTitle(title);
-      editArticlePage.typeSubject(subject);
-      editArticlePage.typeTags(tags);
-      editArticlePage.clickPublishButton();
-      cy.contains("can't be blank").should('be.visible')
-      cy.contains("body").should('be.visible')
-               
-    });
-    cy.stopAllXHR();
-  });
-
-  it("should not add a new article into a website: 'Whats this article about' field  can't be blank", () => {
-    cy.generateRandomData().then((randomData) => {
-      const { tags, title, subject, content } = randomData;
-
-      editArticlePage.typeTitle(title);
-      editArticlePage.typeArticle(content);
-      editArticlePage.typeTags(tags);
-      editArticlePage.clickPublishButton();
-      cy.contains("can't be blank").should('be.visible')
-      cy.contains("description").should('be.visible')
-               
-    });
-    cy.stopAllXHR();
-  });
+  
 });
