@@ -55,3 +55,10 @@ Cypress.Commands.add("logout", () => {
   cy.visit(Cypress.env("url") + "/#/settings");
   cy.contains("button", "Or click here to logout").click();
 });
+
+Cypress.Commands.add('stopAllXHR', () => {
+  cy.intercept('https://api.realworld.io/api/**', (req) => {
+    req.abort();
+  }).as('xhr');
+  cy.wait('@xhr', { timeout: 1 }).then(() => {});
+});
