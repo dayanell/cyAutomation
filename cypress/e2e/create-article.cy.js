@@ -26,6 +26,11 @@ context("Create Article", () => {
     });
   });
 
+  after(()=>{
+    cy.clearAllLocalStorage
+
+  })
+
 
   it("should add a new article into a website", () => {
     cy.generateRandomData().then((randomData) => {
