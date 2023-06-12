@@ -12,6 +12,7 @@ context("Edit article", () => {
   let userData;
 
   beforeEach(() => {
+    cy.intercept('https://api.realworld.io/api/**').as('xhr');
   
     cy.fixture("user-data.json").then((data) => {userData = data;   // Load the data from the fixture into spec
     cy.loginSuccess({ email: userData.email, password: userData.password, name: userData.username,}); // Execute Login
@@ -22,8 +23,7 @@ context("Edit article", () => {
     });
   });
 
-  afterEach(() => {cy.logout();}); // Execute user log out after each test execution
-
+ 
   it("should update the article ", () => {
     cy.generateRandomData().then((randomData) => {const { tags, title, subject, content } = randomData;
 
@@ -38,5 +38,6 @@ context("Edit article", () => {
       articlePage.articlePublishDateIsCorrect();
 
     });
+    cy.stopAllXHR();
   });
 });

@@ -26,10 +26,10 @@ context("Create Article", () => {
     });
   });
 
-  after(()=>{
-    cy.clearAllLocalStorage
+  //after(()=>{
+   //cy.clearAllLocalStorage
 
-  })
+ // })
 
 
   it("should add a new article into a website", () => {

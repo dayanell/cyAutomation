@@ -27,6 +27,7 @@ Cypress.Commands.add("loginSuccess", (user) => {
   const userHomePage = new UserHomePage();
 
   cy.visit(Cypress.env("url") + "/#/login");
+  //cy.get('.offset-md-3').should('be.visible');
 
   signInPage.typeEmail(user.email);
   signInPage.typePassword(user.password);
@@ -62,3 +63,4 @@ Cypress.Commands.add('stopAllXHR', () => {
   }).as('xhr');
   cy.wait('@xhr', { timeout: 1 }).then(() => {});
 });
+

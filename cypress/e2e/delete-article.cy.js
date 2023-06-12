@@ -6,6 +6,7 @@ import ArticlePage from "../support/page-objects/article-page.cy.js";
 Cypress.on("uncaught:exception", (err, runnable) => {return false;});
 
 context("Delete article", () => {
+
   const myArticleListPage = new MyArticleListPage();
   const userHomePage = new UserHomePage();
   const articlePage = new ArticlePage();
@@ -13,6 +14,7 @@ context("Delete article", () => {
   let title;
 
   beforeEach(() => {
+      cy.intercept('https://api.realworld.io/api/**').as('xhr');
       cy.fixture("user-data.json").then((data) => {userData = data; // Load the data from the fixture into spec
       cy.loginSuccess({email: userData.email,password: userData.password,name: userData.username }); // Execute Login
       userHomePage.verifyUserNameIsDisplayed(userData.username); // Verify if the user signed in is the correct user
@@ -30,6 +32,7 @@ context("Delete article", () => {
       articlePage.clickDeleteButton();
       myArticleListPage.openMyArticleListPage();
       cy.contains(title).should("not.exist");
+      cy.stopAllXHR();
     });
   });
 
