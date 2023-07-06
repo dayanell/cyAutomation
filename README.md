@@ -20,7 +20,7 @@ Please refer to the above link to access the detailed test results and reports.
 
 ## Test Execution
 
-You can view and pull the code from the Git repository:
+You can view and pull the code from this  Git repository.
 
 - [GitHub Repository](https://github.com/dayanell/cyAutomation)
 
