@@ -38,11 +38,13 @@ You can view and pull the code from the Git repository:
 
 ## Bug Example Report
 
-This bug is a simulated example. For more complex bugs, I would provide additional details, including browser and device information, and any other relevant information that helps in identifying and resolving the bug.
+This bug is a simulated example. For more complex bugs, I would provide additional details, including browser and device information, images, and any other relevant information that helps in identifying and resolving the bug.
 
 ---
 
 **Bug Report: Bug 001**
+
+**[Vue Vuex Realworld](https://vue-vuex-realworld.netlify.app/#/)**
 
 **Test Case:** [Test Case Code] should add an article to the website
 
@@ -67,9 +69,9 @@ Please note that the application may have several other issues, but they have no
 
 In the `package.json`, I added the scripts to run from Jenkins. Additionally, in the Jenkins configuration, I added the Git repository as a code source for the execution of the jobs.
 
-By using the key provided by the Cypress Cloud application and integrating it with Jenkins, the test executions were automatically reported, and generated reports were available. This integration allows for seamless execution of tests and easy access to comprehensive reports that include detailed information such as test results, videos, scripts, and other relevant data. Ithelps in tracking the test execution status, identifying issues, and facilitating collaboration among team members.
+By using the key provided by the Cypress Cloud application and integrating it with Jenkins, the test executions were automatically reported, and generated reports were available. This integration allows for seamless execution of tests and easy access to comprehensive reports that include detailed information such as test results, videos, scripts, and other relevant data. It helps in tracking the test execution status, identifying issues, and facilitating collaboration among team members.
 
-Please note that the usage of Cypress Cloud for reports at Raidiam is not confirmed. However, I have provided the link to the test execution reports where you can access detailed information, including videos, scripts, test results, and more.
+Please note that  I have provided the link to the test execution reports where you can access detailed information, including videos, scripts, test results, and more.
 
 In my test approach, I did not intentionally create tests to fail. Instead, I followed a process where I executed the scenarios manually first to identify any bugs. Once a bug was discovered, I reported it and waited for it to be fixed. After the fix was implemented, I performed a confirmation test. Only after confirming the fix, I implemented the automated script and added it to the regression test suite. Therefore, intentional failures will not be found in the reports.
 
