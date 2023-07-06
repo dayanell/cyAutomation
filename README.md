@@ -34,7 +34,7 @@ You can view and pull the code from this  Git repository.
 - A base page was created to encapsulate actions and isolate them from the test files. It is recommended not to interact with the base page directly from the test files; instead, it should be accessed through the page objects files. This helps maintain a clear separation of concerns and promotes better code organization.
 - An environment variable was introduced to define the domain, allowing easy testing across different environments such as QA, Dev, and Homologation.
 - The tests were designed with isolation, ensuring zero dependencies between them.
-- The existing scripts cover the basic scenarios for the 5 flows requested. If additional test scenarios are needed, I am willing to create them on Wednesday. However, I believe the existing scripts are sufficient to evaluate my skills for the job opportunity. Please let me know if there are any specific areas you would like me to address.
+- The existing scripts cover the basic scenarios for the 5 flows, but If additional test scenarios are needed, I am willing to create them. However, I believe the existing scripts are sufficient to evaluate my skills. Please let me know if there are any specific areas you would like me to address.
 
 ## Bug Example Report
 
