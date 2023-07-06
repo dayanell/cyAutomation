@@ -71,10 +71,11 @@ In the `package.json`, I added the scripts to run from Jenkins. Additionally, in
 
 By using the key provided by the Cypress Cloud application and integrating it with Jenkins, the test executions were automatically reported, and generated reports were available. This integration allows for seamless execution of tests and easy access to comprehensive reports that include detailed information such as test results, videos, scripts, and other relevant data. It helps in tracking the test execution status, identifying issues, and facilitating collaboration among team members.
 
-Please note that  I have provided the link to the test execution reports where you can access detailed information, including videos, scripts, test results, and more.
+I have provided the link to the test execution reports where you can access detailed information, including videos, scripts, test results, and more. - 
+[Test Results (tests run from Jenkins)](https://cloud.cypress.io/projects/1t7est/runs/31/test-results?actions=%5B%5D&browsers=%5B%5D&groups=%5B%5D&isFlaky=%5B%5D&modificationDateRange=%7B%22startDate%22%3A%221970-01-01%22%2C%22endDate%22%3A%222038-01-19%22%7D&orderBy=EXECUTION_ORDER&oses=%5B%5D&specs=%5B%5D&statuses=%5B%5D&testingTypesEnum=%5B%5D)
 
-In my test approach, I did not intentionally create tests to fail. Instead, I followed a process where I executed the scenarios manually first to identify any bugs. Once a bug was discovered, I reported it and waited for it to be fixed. After the fix was implemented, I performed a confirmation test. Only after confirming the fix, I implemented the automated script and added it to the regression test suite. Therefore, intentional failures will not be found in the reports.
+In this specific sample, the reports will not include any intentionally failures.
 
 Feel free to explore the GitHub repository for the test code and further details on the implementation.
 
-If you have any additional questions or need further assistance, please let me know!
+
